@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using JimsCodingTask_Calculator;
+using NUnit.Framework;
 
 namespace JimsCodingTask_CalcTest
 {
@@ -9,9 +10,9 @@ namespace JimsCodingTask_CalcTest
 		[TestCase(8, 10, 80)]
 		public void SimpleAdditionTest(int a1, int a2, int expected)
 		{
-			var sum = new Addition(a1, a2);
+			var sum = new Addition().Calculate(a1, a2);
 
-			Assert.Equals(expected, sum);
+			Assert.AreEqual(expected, sum);
 		}
 	}
 }
