@@ -12,5 +12,5 @@
   "function-runtime": "dotnetcore3.1",
   "function-memory-size": 256,
   "function-timeout": 30,
-  "function-handler": "JimsCodingTask_LambdaFunction::JimsCodingTask_LambdaFunction.Functions.JimsBasicCalculator::Calculate"
+  "function-handler": "SampleLambda::SampleLambda.Function::FunctionHandler"
 }

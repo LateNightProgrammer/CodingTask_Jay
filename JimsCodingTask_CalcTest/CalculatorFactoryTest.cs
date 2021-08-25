@@ -9,7 +9,7 @@ namespace JimsCodingTask_CalcTest
 		[Test]
 		public void GetCorrectCalculatorStrategyTest_Addition()
 		{
-			var factory = new CalculatorFactory();
+			var factory = new CalculatorFactoryService();
 
 			var result = factory.GetCorrectCalculateStrategy("add");
 
@@ -19,7 +19,7 @@ namespace JimsCodingTask_CalcTest
 		[Test]
 		public void GetCorrectCalculatorStrategyTest_Subtraction()
 		{
-			var factory = new CalculatorFactory();
+			var factory = new CalculatorFactoryService();
 
 			var result = factory.GetCorrectCalculateStrategy("sub");
 
@@ -30,7 +30,7 @@ namespace JimsCodingTask_CalcTest
 		[Test]
 		public void GetCorrectCalculatorStrategyTest_Multiplication()
 		{
-			var factory = new CalculatorFactory();
+			var factory = new CalculatorFactoryService();
 
 			var result = factory.GetCorrectCalculateStrategy("mul");
 
@@ -41,7 +41,7 @@ namespace JimsCodingTask_CalcTest
 		[Test]
 		public void GetCorrectCalculatorStrategyTest_Division()
 		{
-			var factory = new CalculatorFactory();
+			var factory = new CalculatorFactoryService();
 
 			var result = factory.GetCorrectCalculateStrategy("div");
 
@@ -52,7 +52,7 @@ namespace JimsCodingTask_CalcTest
 		[Test]
 		public void GetCorrectCalculatorStrategyTest_Null()
 		{
-			var factory = new CalculatorFactory();
+			var factory = new CalculatorFactoryService();
 
 			var result = factory.GetCorrectCalculateStrategy("x");
 

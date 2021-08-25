@@ -3,7 +3,7 @@
 	/// <summary>
 	/// Creates 
 	/// </summary>
-	public class CalculatorFactory
+	public class CalculatorFactoryService : ICalculatorFactoryService
 	{
 		/// <summary>
 		/// Can return null. This is the only place to edit if we want to add a new ICalculateStrategy
