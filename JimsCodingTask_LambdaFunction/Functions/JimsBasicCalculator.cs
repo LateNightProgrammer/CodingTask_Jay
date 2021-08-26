@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using Amazon.Lambda.APIGatewayEvents;
 using Amazon.Lambda.Core;
 using JimsCodingTask_Calculator;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,9 +27,11 @@ namespace JimsCodingTask_LambdaFunction.Functions
 		/// <param name="context"></param>
 		/// <returns></returns>
 		[LambdaSerializer(typeof(Amazon.Lambda.Serialization.SystemTextJson.DefaultLambdaJsonSerializer))]
-		public int Calculate(string input, ILambdaContext context)	
+		public int Calculate(APIGatewayProxyRequest input, ILambdaContext context)
 		{
-			var inputArray = input.Split(",").ToArray();
+			var queryString = input.QueryStringParameters["input"];
+
+			var inputArray = queryString.Split(",").ToArray();
 
 			if (inputArray.Length != 3)
 			{

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using Amazon.Lambda.APIGatewayEvents;
 using Amazon.Lambda.Core;
 using JimsCodingTask_Calculator;
 using JimsCodingTask_LambdaFunction.Functions;
@@ -14,16 +16,21 @@ namespace LambdaFunctionTests
 		public void TestCalculator()
 		{
 			var mockCalcFactory = new Mock<IServiceProvider>();
+
 			var lambdaContext = new Mock<ILambdaContext>();
 
 			mockCalcFactory.Setup(x => x.GetService(typeof(ICalculatorFactoryService))).Returns(new CalculatorFactoryService());
 
 			var calculateFunc = new JimsBasicCalculator(mockCalcFactory.Object);
 
-			var input = "add,2,3";
-			var result = calculateFunc.Calculate(input, lambdaContext.Object);
+			var apiGatewayProxy = new APIGatewayProxyRequest();
 
-			Assert.AreEqual(5,result);
+			apiGatewayProxy.QueryStringParameters = 
+				new Dictionary<string, string> {{"input", "add,2,5"}};
+
+			var result = calculateFunc.Calculate(apiGatewayProxy, lambdaContext.Object);
+
+			Assert.AreEqual(7,result);
 		}
 	}
 }
