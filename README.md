@@ -38,4 +38,4 @@ Build pipeline to deploy Serverless function.
 Calculator commands are not user friendly. 
 Calculator functionality is not bullet proof. No exception handling and logging
 
-Variale naming conventions are not consistent.
+Variable naming conventions are not consistent.
