@@ -25,7 +25,7 @@ https://garywoodfine.com/dependency-injection-in-aws-lambda/
 Configured API Gateway as trigger to lambda function.
 
 ## 4) Lambda FunctionTest : 30 min
-Straingt forward unit test, did not bothered add more tests as I am running short of time.
+Straingt forward unit test, did not bothered add more tests as I am running out of time.
 
 ## 5) Console application : 10 min
 Quick http client call demonstration
@@ -34,8 +34,6 @@ Quick http client call demonstration
 More comments in the code and more unit tests with edge case scenarios.
 
 Build pipeline to deploy Serverless function. 
-
 Calculator commands are not user friendly. 
-Calculator functionality is not bullet proof. No exception handling and logging
-
+Calculator functionality is not bullet proof. No exception handling and logging.
 Variable naming conventions are not consistent.
